@@ -16,6 +16,18 @@ class ApiService {
       console.log(error)
     }
   }
+
+  async fetchPosts() {
+    try {
+      const request = new Request(`${this.url}/posts.json`, {
+        method: 'get',
+      })
+      const response = await fetch(request)
+      return response.json()
+    } catch (error) {
+      console.log('Error')
+    }
+  }
 }
 
 export const apiService = new ApiService(
