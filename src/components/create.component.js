@@ -25,9 +25,9 @@ function submitHandler(event) {
       type: this.$el.type.value,
       ...this.form.value(),
     }
+
+    this.form.clear()
+
     console.log('sss', formData)
-  } else {
-    console.warn('Form is invalid')
-    alert('From is invalid, please enter text')
   }
 }
