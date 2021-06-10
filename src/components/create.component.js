@@ -33,5 +33,6 @@ async function submitHandler(event) {
     this.form.clear()
 
     console.log('sss', formData)
+    alert('Post created')
   }
 }
